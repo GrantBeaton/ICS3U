@@ -1,1 +1,2 @@
-console.log("Hello Grant's World");
+console.log("Hello.\nThis is \"Grant's javacript\"");
+
