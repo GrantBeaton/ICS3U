@@ -18,4 +18,6 @@ else if (type == "F"){
     realcel = Math.round(cel*10)/10;
     console.log(realcel + "C");
 }
-
+else{
+    console.log("Error!");
+}
