@@ -9,7 +9,7 @@ function whoAreYou() {
 
     let hobby = prompt("What's your favourite thing to do? ");
     
-    console.log("Hello, " + name + " , you are " + age + " years old and your favourite hobby is " + hobby + "!");
+    console.log("Hello, " + name + ", you are " + age + " years old and your favourite hobby is " + hobby + "!");
 }
 whoAreYou()
 
@@ -26,20 +26,23 @@ tax_calculator()
 function calculator(operator){
 
     let num1 = prompt("Give me a random number. ");
-    num1 = parseInt(num1);
+    num1 = Math.round(num1);
     num1 = Number(num1);
 
     let num2 = prompt("Give me a second random number. ");
-    num2 = parseInt(num2);
+    num2 = Math.round(num2);
     num2 = Number(num2);
 
     let add = (num1 + num2);
+    add = Math.round(add);
     console.log("If you added the numbers together, you get " + add + ".");
 
     let sub = (num1 - num2);
+    add = Math.round(sub);
     console.log("If you subtracted the second number from the first, you get " + sub + ".");
 
     let multi = (num1*num2);
+    multi = Math.round(multi);
     console.log("If you multiplied the numbers together, you get " + multi + ".");
 
     let div = (num1/num2);
@@ -59,6 +62,6 @@ function pythagorean(legA, legB, Hypoteneuse){
 
     let hypo = Math.sqrt(((sideA*sideA) + (sideB*sideB)));
     hypo = Math.round(((hypo)*10)/10)
-    console.log("The length of the hypotneuse is " + hypo + ".");
+    console.log("The length of the hypoteneuse is " + hypo + ".");
 }
 pythagorean()
