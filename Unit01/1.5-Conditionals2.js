@@ -51,16 +51,16 @@ else{
 let random_number = Math.random() * 10;    
 random_number = Math.floor(random_number);
 
-if (random_number === 0){
+if (random_number == 0){
     console.log("The random number was 0.");
 }
-if (random_number % 2 === 0){
+if (random_number % 2 == 0){
     console.log("The random number is even.");
 }
-if ((random_number % 2 === 0) && (random_number % 3 === 0)){
+if ((random_number % 2 == 0) && (random_number % 3 == 0)){
     console.log("The random number is divisible by 2 and 3.")
 }
-if ((random_number === 0) || (random_number === 1) || (random_number === 2) || (random_number === 3) || (random_number === 5) || (random_number === 7)){
+if ((random_number == 0) || (random_number == 1) || (random_number == 2) || (random_number == 3) || (random_number == 5) || (random_number == 7)){
     console.log("The random number is a prime number.")
 }
 
