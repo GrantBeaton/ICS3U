@@ -1,7 +1,6 @@
 const prompt = require('prompt-sync')();
 
 //Is it the weekend
-console.log("Is it the weekend?")
 let day = prompt("Give me the current day of the week if Sunday is 1 and Saturday is 7. ");
 day = Number(day);
 
@@ -15,10 +14,10 @@ function is_it_the_weekend(day){
     }
 }
 
+console.log("Is it the weekend?")
 console.log(is_it_the_weekend(day))
 
 //Even number divisible by nine
-console.log("Is it an even number divisible by nine?")
 let value = prompt("Give me a random number. ");
 value = Number(value);
 
@@ -31,6 +30,7 @@ function evNineIble(value){
     }
 }
 
+console.log("Is it an even number divisible by nine?")
 console.log(evNineIble(value));
 
 //Surface Area of a Cylinder
@@ -70,37 +70,48 @@ console.log("The area of the cylinder is: ")
 console.log(area_cylinder(areacyl));
 
 //Creepy Ghosts
+//Polter State
 let random_number = Math.random() * 20;    
 random_number = Math.floor(random_number);
 
-console.log(random_number);
-if (random_number%2 == 0){
-    let polter = "1";
-    polter = Number(polter);
+let polter = "number";
+
+if (random_number == 0){
+    polter = "laughing";
 }
 else if (random_number % 3 == 0){
-    let polter = "2";
-    polter = Number(polter);
+    polter = "angry";
 }
 else{
-    let polter = "3";
-    polter = Number(polter);
+    polter = "neutral";
 }
-console.log(polter);
 
+//Wolter State
 let random_number2 = Math.random() * 20;    
 random_number2 = Math.floor(random_number2);
 
+let wolter = "number"; 
+
 if (random_number2 % 2 == 0){
-    let wolter = 1;
-    wolter = Number(wolter);
+    wolter = "laughing";
 }
 else if (random_number2 % 3 == 0){
-    let wolter = 2;
-    wolter = Number(wolter);
+    wolter = "angry";
 }
 else{
-    let wolter = 3;
-    wolter = Number(wolter);
+    let wolter = "neutral";
 }
-console.log(wolter);
+
+function ghost_watch(polter,wolter){
+    if (polter == wolter){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+console.log("Is the lockdown active? ")
+console.log(ghost_watch(polter,wolter))
+
+
