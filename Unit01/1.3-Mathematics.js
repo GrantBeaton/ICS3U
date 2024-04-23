@@ -1,3 +1,5 @@
+const prompt = require('prompt-sync')();
+
 let celsius = 100;
 let fahrenheit = 0;
 celsius = celsius + 2;
