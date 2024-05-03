@@ -47,7 +47,7 @@ function emotionFeel(){
                     let superblyhappy = "allthetime";
 
                     if (superblyhappy == "allthetime"){
-                        console.log("You are superblyhappy.")
+                        console.log("You are superbly happy.")
 
                      }               
                 }
