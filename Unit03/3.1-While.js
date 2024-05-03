@@ -83,15 +83,15 @@ function average(n1, n2, n3, n4, n5){
         n4 = Number(prompt("Whats the fourth number? "));
         n5 = Number(prompt("Whats the fifth number? "));
     let average = ((n1 + n2 + n3 + n4 + n5) /5);//Calculates the average
+    userenter = "no longer";//Stops userenter, so that we don't get an infinite while loop
     return average;
+
    } 
    while (userenter == "n"){
     console.log("Well then, Bye, Bye, Bye, BYE BYE! - NSync");
+    userenter = "no longer";//Stops userenter, so that we don't get an infinite while loop
    }
 }
-console.log("The average is " + average(n1, n2, n3, n4, n5));//Prints "The average is ___"
-
-
-
-
-
+    while (userenter == "y"){
+        console.log("The average is " + average(n1, n2, n3, n4, n5));//Prints "The average is ___"
+    }
