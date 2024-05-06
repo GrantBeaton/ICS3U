@@ -70,22 +70,22 @@ console.log(random_until(min, max, stop));//Prints the value of value
 //Task 3
 let n1 = 0;//Sets the n values as placeholder 0s 
 let n2 = 0;
-let n3 = 0;
-let n4 = 0;
-let n5 = 0;
-let userenter = prompt("Do you have numbers that need averaging (y/n) ");
 
-function average(n1, n2, n3, n4, n5){
+let userenter = prompt("Do you have numbers that need averaging (y/n) ");//Queues up the call on the function
+
+function average(n1, n2){
+
     while (userenter == "y"){
-        n1 = Number(prompt("Whats the first number? "));//Asks the user for four numbers
-        n2 = Number(prompt("Whats the second number? "));
-        n3 = Number(prompt("Whats the third number? "));
-        n4 = Number(prompt("Whats the fourth number? "));
-        n5 = Number(prompt("Whats the fifth number? "));
-    let average = ((n1 + n2 + n3 + n4 + n5) /5);//Calculates the average
-    userenter = "no longer";//Stops userenter, so that we don't get an infinite while loop
-    return average;
-
+        let n = Number(prompt("How many numbers do you have to average? "));//Asks how many numbers they have to average, sets as n
+        let ogn = n;//Makes ogn, which is the original n value
+        while (n > 0){//while true, gains a new number, adds it value to n2, and reduces n
+            n1 = Number(prompt("Give me a number: "));//Asks the user for the number
+            n2 = n2 + n1;
+            n = n - 1;
+    }
+        let average = (n2 / ogn);//Calculates the average
+        userenter = "no longer";//Stops userenter, so that we don't get an infinite while loop
+        return average;
    } 
    while (userenter == "n"){
     console.log("Well then, Bye, Bye, Bye, BYE BYE! - NSync");
@@ -93,5 +93,5 @@ function average(n1, n2, n3, n4, n5){
    }
 }
     while (userenter == "y"){
-        console.log("The average is " + average(n1, n2, n3, n4, n5));//Prints "The average is ___"
+        console.log("The average is " + average(n1, n2));//Prints "The average is ___"
     }
