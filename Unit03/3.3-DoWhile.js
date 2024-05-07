@@ -20,17 +20,57 @@ function negative_only(){
 negative_only()
 
 //Task 2
-
-let n;
 function printOdd(n){
+    let number = 0;
     do{
-        n = Number(prompt("Give me a random number: "));
-        let number = 1;
-        while (number % 2 == 0){
-            console.log(number);
-            number++;
+        while (n > 0){
+            number = Number(number);
+            n--;
+            if (number % 2 != 0){
+                console.log(number);
+                number++;
+        }
+            else{
+                number++;
+            }
+    }
+    }
+    while (isNaN(n));
+}
+printOdd(Number(prompt("Give me a random number: ")));
+
+//Task 3
+function parrotUntilQuit(){
+    let word = prompt("Give me a random word (don't type quit): ");
+    do{
+        if (word != "quit"){
+            console.log("Give me a random word (don't type quit):");
+
+        }
+        else if (word == "quit"){
+            console.log("Goodbye!");
+            word = "done";
         }
     }
-    while(n < 1);
+    while (word == "quit");
+    }
+
+parrotUntilQuit();
+
+//Task 4
+function factorial(n){
+    let count = n;
+    let fact = n;
+    let realfact;
+    do{
+        while (count > 0){
+            fact = (n*count);
+            count --;
+            realfact = realfact + fact
+        }
+        return realfact;
+    }
+    while ((isNaN(n)) || (n > 0));
+
 }
-printOdd(n);
+console.log(factorial(Number(prompt("Give me a positive, whole number: "))));

@@ -67,7 +67,7 @@ function add_subtract(str){
         total += number;//Regular adding of numbers
         number ++;//Don't make an infinite loop
         if (str.charCodeAt(number) == 45){//Figures out if its a -
-            number = number + 1;
+            number++;
             number = Number(number + 1);
             total = total - number;//Subtracts the next number
         }
