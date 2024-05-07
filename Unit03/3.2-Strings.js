@@ -60,18 +60,20 @@ console.log(add("54327890208990"));//Calls the function with the numbers
 
 //Task 4
 function add_subtract(str){
-    let number = 0;//Sets these values as 0
-    let total = 0;
-    while (number < str.length + 1) {
-        number = Number(number);
-        total += number;//Regular adding of numbers
-        number ++;//Don't make an infinite loop
-        if (str.charCodeAt(number) == 45){//Figures out if its a -
+    //Sets these values as 0
+    let total = "";
+    for (let n = 0; n < str.length; n++) {
+        let number = str.charAt(n);
+        if (number[n] != "-"){
+            total = total + number;//Regular adding of numbers
+            number ++;//Don't make an infinite loop
+            
+    }
+        else if (number[a] == "-"){//Figures out if its a -
             number++;
-            number = Number(number + 1);
             total = total - number;//Subtracts the next number
         }
-        }
-        return total;//Returns
     }
-console.log(add_subtract("539-53290-3248-53-18"));//Calls the function with the numbers
+    return total;
+}   
+console.log(add_subtract("535-4389-54389-328-12389"));//Calls the function with the numbers
