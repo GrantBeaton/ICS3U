@@ -63,15 +63,15 @@ function add_subtract(str){
     let number = 0;//Sets these values as 0
     let total = 0;
     while (number < str.length + 1) {
-        if (number.charcodeAt(str.length) == 45){//Figures out if its a -
-            number++;
-            number = Number(number);
-            total = total - number;//Subtracts the next number
-        }
         number = Number(number);
         total += number;//Regular adding of numbers
         number ++;//Don't make an infinite loop
+        if (str.charCodeAt(number) == 45){//Figures out if its a -
+            number = number + 1;
+            number = Number(number + 1);
+            total = total - number;//Subtracts the next number
+        }
         }
         return total;//Returns
     }
-console.log(add_subtract("53289-4389-32895-54-7483"));//Calls the function with the numbers
+console.log(add_subtract("539-53290-3248-53-18"));//Calls the function with the numbers
