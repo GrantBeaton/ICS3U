@@ -63,7 +63,7 @@ function add_subtract(str){
     let number = 0;//Sets these values as 0
     let total = 0;
     while (number < str.length + 1) {
-        if (number == "-"){//Figures out if its a 0
+        if (number.charcodeAt(str.length) == 45){//Figures out if its a -
             number++;
             number = Number(number);
             total = total - number;//Subtracts the next number
@@ -74,4 +74,4 @@ function add_subtract(str){
         }
         return total;//Returns
     }
-console.log(add_subtract("53289-4389-32895-54-7483"));//Calls the function with teh numbers
+console.log(add_subtract("53289-4389-32895-54-7483"));//Calls the function with the numbers
