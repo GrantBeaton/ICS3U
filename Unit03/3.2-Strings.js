@@ -2,7 +2,6 @@
  * 3.2 - Strings and Loops
  * Author: Grant Beaton
  * 
- * Lesson link:  go.brash.ca/3U-3.1-While-Loops
  **/
 
 
