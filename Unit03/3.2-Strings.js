@@ -59,21 +59,17 @@ function add(str){
 console.log(add("54327890208990"));//Calls the function with the numbers
 
 //Task 4
-function add_subtract(str){
-    //Sets these values as 0
-    let total = "";
-    for (let n = 0; n < str.length; n++) {
-        let number = str.charAt(n);
-        if (number[n] != "-"){
-            total += number;//Regular adding of numbers
-            number ++;//Don't make an infinite loop
-            
+function add_subtract(str2){
+    let total2 = 0;
+    for (let n = 0; n < str2.length; n++) {
+        if (str2[n] != "-"){
+            total2 += parseInt(str2[n]);//Regular adding of numbers
     }
-        else if (number[a] == "-"){//Figures out if its a -
-            number++;
-            total -= number;//Subtracts the next number
+        else if (str2[n] == "-"){//Figures out if its a -
+            n++;
+            total2 -= parseInt(str2[n]);//Subtracts the next number
         }
     }
-    return total;
+    return total2;
 }   
-console.log(add_subtract("535-4389-54389-328-12389"));//Calls the function with the numbers
+console.log(add_subtract(prompt("Give me a string of random numbers with dashes throuhout: ")));//Calls the function with the numbers
