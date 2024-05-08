@@ -65,13 +65,13 @@ function add_subtract(str){
     for (let n = 0; n < str.length; n++) {
         let number = str.charAt(n);
         if (number[n] != "-"){
-            total = total + number;//Regular adding of numbers
+            total += number;//Regular adding of numbers
             number ++;//Don't make an infinite loop
             
     }
         else if (number[a] == "-"){//Figures out if its a -
             number++;
-            total = total - number;//Subtracts the next number
+            total -= number;//Subtracts the next number
         }
     }
     return total;
