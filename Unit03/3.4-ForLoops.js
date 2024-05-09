@@ -11,8 +11,8 @@ const prompt = require('prompt-sync')();
 
 //Part 1
 //Task 1
-let start = Number(prompt("Give me a number to start at: "));
-let stop = Number(prompt("Give me a number to stop at: "));
+let start = Number(prompt("Give me a low number to start at: "));
+let stop = Number(prompt("Give me a higher number to stop at: "));
 
 function countUp(start,stop){
     for (let p = start; p <= stop; p+= 1){
@@ -22,5 +22,14 @@ function countUp(start,stop){
 countUp(start,stop);
 
 //Task 2
+let start2 = Number(prompt("Give me a high number to start at: "));
+let stop2 = Number(prompt("Give me a lower number to stop at: "));
+
+function countDown(start2,stop2){
+    for (let p2 = start2; p <= stop2; p2+= 1){
+        console.log(p2);
+    }
+}
+countDown(start2,stop2);
 
 
