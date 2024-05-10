@@ -1,5 +1,5 @@
 /**
- * 3.4 - For Loops
+ * 3.5 - Nested Loops
  * Author: Grant Beaton
  * 
  **/
@@ -75,8 +75,6 @@ function print_square(){
         }
     let howmany = Number(prompt("How wide do you want your square to be? "));
     let oghowmany = howmany;
-    let trytwo = "";
-    let ogtrytwo = "";
     let emoji = "";
     let emoji2 = "";
     while (howmany > 0){
@@ -88,8 +86,8 @@ function print_square(){
         oghowmany -= 1;
     }
     
-    trytwo = Number(prompt("How wide do you want your square to be (again)? "));
-    ogtrytwo = trytwo;
+    let trytwo = Number(prompt("How wide do you want your square to be (again)? "));
+    let ogtrytwo = trytwo;
     do{
         while (trytwo > 0){
             emoji2 += thisone;
@@ -128,8 +126,8 @@ function print_diamond(){
         }
     let howmany = Number(prompt("How wide do you want your diamond to be? "));
     let emojicount = 1;
-    let emoji = " ";
-    let emoji2 = " ";
+    let emoji = "";
+    let emoji2 = "";
         while (emojicount < (howmany + 1)){
             emoji += thisone;
             emojicount += 1;
