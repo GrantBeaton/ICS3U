@@ -10,7 +10,8 @@ const prompt = require('prompt-sync')();
 
 //Task 1
 function print_line(){
-    let whichone = Number(prompt("Emoji selection menu\n1. 🙀\n2. 🛟\n3. 👑\n4. 😎\n5. ❤️\nEnter the number of the emoji that you want: "));
+    console.log("\nEmoji selection menu  \n1. 🙀  \n2. 🛟  \n3. 👑  \n4. 😎  \n5. ❤️");
+    let whichone = Number(prompt("Enter the number of the emoji that you want: "));
     let thisone = "";
         if (whichone == 1){
             thisone = "🙀";
@@ -31,7 +32,6 @@ function print_line(){
             console.log("Alright, you don't get any emojis then. ");
         }
     let howmany = Number(prompt("How many emojis do you want? "));
-    let oghowmany = howmany;
     let emoji = "";
     let emoji2 = "";
     while (howmany > 0){
@@ -39,21 +39,23 @@ function print_line(){
         howmany -= 1;
     }
     console.log(emoji);
-    howmany = Number(prompt("How many emojis do you want (again): "));
+    let trytwo = Number(prompt("How many emojis do you want (again): "));
+    
     do{
-        while (oghowmany > 0){
+        while (trytwo > 0){
             emoji2 += thisone;
-            oghowmany -= 1;
+            trytwo -= 1;
         }
-        console.log(emoji);
+        console.log(emoji2);
     }
-    while (oghowmany < 0);
+    while (trytwo < 0);
 }
 print_line();
 
 //Task 2
 function print_square(){
-    let whichone = Number(prompt("Emoji selection menu\n1. ⚔️\n2. 🫏\n3. 🤮\n4. 💩\n5. 🦥\nEnter the number of the emoji that you want: "));
+    console.log("\nEmoji selection menu  \n1. 🙀  \n2. 🛟  \n3. 👑  \n4. 😎  \n5. ❤️");
+    let whichone = Number(prompt("Enter the number of the emoji that you want: "));
     let thisone = "";
         if (whichone == 1){
             thisone = "⚔️";
@@ -94,7 +96,7 @@ function print_square(){
             trytwo -= 1;
         }
         while (ogtrytwo > 0){
-            console.log(emoji);
+            console.log(emoji2);
             ogtrytwo -= 1;
         }
     }
@@ -103,8 +105,11 @@ function print_square(){
 print_square()
 
 //Bonus Task 1
+
+//Bonus Task 2
 function print_diamond(){
-    let whichone = Number(prompt("Emoji selection menu\n1. 🤑\n2. 😜\n3. 😭\n4. 🤯\n5. 🤬\nEnter the number of the emoji that you want: "));
+    console.log("\nEmoji selection menu  \n1. 🙀  \n2. 🛟  \n3. 👑  \n4. 😎  \n5. ❤️");
+    let whichone = Number(prompt("Enter the number of the emoji that you want: "));
     let thisone = "";
         if (whichone == 1){
             thisone = "🤑";
@@ -155,3 +160,5 @@ function print_diamond(){
 
 }
 print_diamond()
+
+
