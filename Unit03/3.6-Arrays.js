@@ -132,7 +132,7 @@ function reverse_strings(){
     while (p <= arr.length - 1) {//If the length is 0 or more, it runs
         newnumb = arr[p];
         while (length != - 1){
-            revarr = revarr + newnumb[length];
+            revarr += newnumb[length];
             length--;
         }
         p++;
