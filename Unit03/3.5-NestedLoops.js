@@ -54,7 +54,7 @@ print_line();
 
 //Task 2
 function print_square(){
-    console.log("\nEmoji selection menu  \n1. 🙀  \n2. 🛟  \n3. 👑  \n4. 😎  \n5. ❤️");
+    console.log("\nEmoji selection menu  \n1. ⚔️  \n2. 🫏  \n3. 🤮  \n4. 💩  \n5. 🦥");
     let whichone = Number(prompt("Enter the number of the emoji that you want: "));
     let thisone = "";
         if (whichone == 1){
@@ -108,7 +108,7 @@ print_square()
 
 //Bonus Task 2
 function print_diamond(){
-    console.log("\nEmoji selection menu  \n1. 🙀  \n2. 🛟  \n3. 👑  \n4. 😎  \n5. ❤️");
+    console.log("\nEmoji selection menu  \n1. 🤑  \n2. 😜  \n3. 😭  \n4. 🤯  \n5. 🤬");
     let whichone = Number(prompt("Enter the number of the emoji that you want: "));
     let thisone = "";
         if (whichone == 1){
