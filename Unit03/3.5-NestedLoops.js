@@ -31,24 +31,18 @@ function print_line(){
         else{
             console.log("Alright, you don't get any emojis then. ");
         }
-    let howmany = Number(prompt("How many emojis do you want? "));
-    let emoji = "";
-    let emoji2 = "";
+        let go = 0;
+    while (go < 2){
+        let howmany = 0;
+        let emoji = "";
+        howmany = Number(prompt("How many emojis do you want? "));
     while (howmany > 0){
         emoji += thisone;
         howmany -= 1;
     }
     console.log(emoji);
-    let trytwo = Number(prompt("How many emojis do you want (again): "));
-    
-    do{
-        while (trytwo > 0){
-            emoji2 += thisone;
-            trytwo -= 1;
-        }
-        console.log(emoji2);
-    }
-    while (trytwo < 0);
+    go ++;
+}
 }
 print_line();
 
@@ -75,32 +69,21 @@ function print_square(){
         else{
             console.log("Alright, you don't get any emojis then. ");
         }
-    let howmany = Number(prompt("How wide do you want your square to be? "));
-    let oghowmany = howmany;
-    let emoji = "";
-    let emoji2 = "";
-    while (howmany > 0){
-        emoji += thisone;
-        howmany -= 1;
+        let go = 0;
+    while (go < 2){
+        let howmany = 0;
+        let emoji = "";
+        howmany = Number(prompt("How wide do you want your square to be? "));
+        let oghowmany = howmany;
+        while (howmany > 0){
+            emoji += thisone;
+            howmany -= 1;
     }
-    while (oghowmany > 0){
-        console.log(emoji);
-        oghowmany -= 1;
+        while (oghowmany > 0){
+            console.log(emoji);
+            oghowmany -= 1;
     }
-    
-    let trytwo = Number(prompt("How wide do you want your square to be (again)? "));
-    let ogtrytwo = trytwo;
-    do{
-        while (trytwo > 0){
-            emoji2 += thisone;
-            trytwo -= 1;
-        }
-        while (ogtrytwo > 0){
-            console.log(emoji2);
-            ogtrytwo -= 1;
-        }
-    }
-    while (trytwo < 0);
+}
 }
 print_square()
 

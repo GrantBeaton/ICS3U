@@ -81,5 +81,62 @@ function contains(){
 console.log(contains());
 
 //Challenge Task 1
+function min_max(){
+    let arr = [7,2,-4,5,2,9,8,0,1,3,9,-5,-1,5,-1,-8,2,3];
+    let p = 0;
+    let newnumb = 0;
+    let smallnumb = 0;
+    let bignumb = 0;
+    while (p <= arr.length - 1){
+        newnumb = arr[p];
+        if (newnumb < smallnumb){
+            smallnumb = newnumb;
+            p++;  
+        }      
+        else if (newnumb > bignumb){
+            bignumb = newnumb;
+            p++;
+        }
+        p++;
+}
+console.log("The smallest numbers in the array is: " + smallnumb + ", and the biggest number is: " + bignumb);
+}
+min_max();
 
+//Challenge Task 2
+function sum(){
+    let arr = ["yes", "no", 6, 7, "r", -3, "noob", 12, "Happy", true, "Up", 23, 3.4, -4];
+    let p = 0;
+    let newnumb = 0;
+    let total = 0;
+    while (p <= arr.length - 1){
+        newnumb = arr[p]; 
+        if (isNaN(newnumb)){
+        }
+        else {
+            total += Number(newnumb);
+        }     
+        p++;
+}
+return total;
+}
+console.log("The total of all of the numbers is: " + sum());
 
+//Challenge Task 3
+function reverse_strings(){
+    let arr = ["Hello", "Goodbye", "Coding is fun!", "Strings are easy.", "zzzzzzz"]
+    let revarr = "";
+    let p = 0;
+    let length = arr.length;
+    let newnumb = 0;
+    while (p <= arr.length - 1) {//If the length is 0 or more, it runs
+        newnumb = arr[p];
+        while (length != - 1){
+            revarr = revarr + newnumb[length];
+            length--;
+        }
+        p++;
+        console.log(revarr);//Prints the reversed word
+    }
+}
+reverse_strings();
