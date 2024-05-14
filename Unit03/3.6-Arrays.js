@@ -9,19 +9,17 @@
 const prompt = require('prompt-sync')();
 
 //Practice Task 1
-function print_array(){
-    let arr = [56, 34, -99, "Hello", true, "Good bye", 0, -1, 42];
+function print_array(arr){
     let p = 0;
     while (p <= arr.length - 1){
     console.log(arr[p]);
     p++;
     }
 }
-print_array();
+print_array([56, 34, -99, "Hello", true, "Good bye", 0, -1, 42]);
 
 //Practice Task 2
-function min(){
-    let arr = [7,2,-4,5,2,9,8,0,1,3,9,-5,-1,5,-1,-8,2,3];
+function min(arr){
     let p = 0;
     let newnumb = 0;
     let oldnumb = 0;
@@ -35,16 +33,16 @@ function min(){
     }
     return oldnumb;
 }
-console.log("The lowest number within the array is " + min());
+console.log("The lowest number within the array is " + min([7,2,-4,5,2,9,8,0,1,3,9,-5,-1,5,-1,-8,2,3]));
 
 //Practice Task 3
-function longest_string(){
     let string = "a";
     let string2 = string + "b";
     let string3 = string2 + "c";
     let string4 = string3 + "d";
     let string5 = string4 + "efghijklmnopqrstuvwxyz"
-    let arr = [string, string2, string3, string4, string5];
+
+function longest_string(arr){
     let p = 0;
     let newstring = 0;
     let oldstring = 0;
@@ -59,11 +57,10 @@ function longest_string(){
     }
     return oldstring;
 }
-console.log("The longest string has " + longest_string() + " characters.");
+console.log("The longest string has " + longest_string([string, string2, string3, string4, string5]) + " characters.");
 
 //Practice Task 4
-function contains(){
-    let arr = ["yes", "no", 6, 7, "r", -3, "noob", 12, "Happy", "Up", 23, 3.4, -4];
+function contains(arr){
     let value = prompt("Give me a number or word, I'll tell you if the random array has it: ");
     let p = 0;
     let currentvalue = 0;
@@ -78,11 +75,10 @@ function contains(){
     }
     return false;
 }
-console.log(contains());
+console.log(contains(["yes", "no", 6, 7, "r", -3, "noob", 12, "Happy", "Up", 23, 3.4, -4]));
 
 //Challenge Task 1
-function min_max(){
-    let arr = [7,2,-4,5,2,9,8,0,1,3,9,-5,-1,5,-1,-8,2,3];
+function min_max(arr){
     let p = 0;
     let newnumb = 0;
     let smallnumb = 0;
@@ -101,11 +97,10 @@ function min_max(){
 }
 console.log("The smallest numbers in the array is: " + smallnumb + ", and the biggest number is: " + bignumb);
 }
-min_max();
+min_max([7,2,-4,5,2,9,8,0,1,3,9,-5,-1,5,-1,-8,2,3]);
 
 //Challenge Task 2
-function sum(){
-    let arr = ["yes", "no", 6, 7, "r", -3, "noob", 12, "Happy", true, "Up", 23, 3.4, -4];
+function sum(arr){
     let p = 0;
     let newnumb = 0;
     let total = 0;
@@ -120,23 +115,22 @@ function sum(){
 }
 return total;
 }
-console.log("The total of all of the numbers is: " + sum());
+console.log("The total of all of the numbers is: " + sum(["yes", "no", 6, 7, "r", -3, "noob", 12, "Happy", true, "Up", 23, 3.4, -4]));
 
 //Challenge Task 3
-function reverse_strings(){
-    let arr = ["Hello", "Goodbye", "Coding is fun!", "Strings are easy.", "zzzzzzz"]
-    let revarr = "";
+function reverse_strings(arr){
     let p = 0;
-    let length = arr.length;
-    let newnumb = 0;
+    let longness = arr.length;
     while (p <= arr.length - 1) {//If the length is 0 or more, it runs
-        newnumb = arr[p];
-        while (length != - 1){
-            revarr += newnumb[length];
-            length--;
+        let revarr = "";
+        arr = arr[p];
+        while (longness >= 0){
+            revarr += arr[longness];
+            longness--;
         }
         p++;
         console.log(revarr);//Prints the reversed word
+        longness = arr.length
     }
 }
-reverse_strings();
+reverse_strings(["Hello", "Goodbye", "Coding is fun!", "Strings are easy.", "zzzzzzz"]);
