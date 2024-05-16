@@ -215,5 +215,3 @@ function print_diamond(){
 
 }
 print_diamond()
-
-
