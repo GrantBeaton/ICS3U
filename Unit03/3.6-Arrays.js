@@ -113,7 +113,7 @@ function sum(arr){
         }     
         p++;
 }
-return total;//Returns the total
+return total - 1;//Returns the total
 }
 console.log("The total of all of the numbers is: " + sum(["yes", "no", 6, 7, "r", -3, "noob", 12, "Happy", true, "Up", 23, 3.4, -4]));//Prints the sum in a sentence while calling the value
 

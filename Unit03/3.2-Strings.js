@@ -46,16 +46,15 @@ dragons_and_goblins("gdsafssdadgyafudsagdsadhasdshgaasdh");//Calls the function 
 
 //Task 3
 function add(str){
-    let number = 0;//Sets these values as 0
     let total = 0;
-    while (number < str.length + 1) {//While the current number is more than the length + 1, it runs
-        number = Number(number);//Sets number
-        total += number;//Adds number to the total
-        number ++;//Adds one to number to not go infinitely
-        }
+    for (let n = 0; n < str.length; n++) {
+        if (str[n] != "-"){
+            total += parseInt(str[n]);//Regular adding of numbers
+    }
+    }
     return total;
     }
-console.log(add("54327890208990"));//Calls the function with the numbers
+console.log(add(prompt("Give me a string of random numbers: ")));//Calls the function with the numbers
 
 //Task 4
 function add_subtract(str2){
@@ -71,4 +70,4 @@ function add_subtract(str2){
     }
     return total2;
 }   
-console.log(add_subtract(prompt("Give me a string of random numbers with dashes throuhout: ")));//Calls the function with the numbers
+console.log(add_subtract(prompt("Give me a string of random numbers with dashes throughout: ")));//Calls the function with the numbers
